@@ -1,0 +1,19 @@
+ <%- include('partials/header'); -%>
+<h1>Home</h1>
+<p class="abcd"><%= FirstContent %></p>
+ <!-- for(var i=0;i<posts.length;i++){
+  console.log(posts[i].title1);
+ }  -->
+ <% posts.forEach(function(post){ %>
+  <h1><%= post.title1 %></h1>
+  <p><%= post.content.substring(0,50) + " ..." %><a href="/posts/<%= post.title1 %>">Read more</a></p>
+  <% })  %>
+  <br>
+  <br>
+  <br>
+  <form class="abcd" action="/shreyas" method="post">
+   <h3>You can compose your own blogs !</h3>
+   <button type="submit" class="btn btn-lg btn-primary" name="button45">Publish it out !</button>
+  </form>
+
+ <%- include('partials/footer'); -%>
