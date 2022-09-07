@@ -1,12 +1,9 @@
  <%- include('partials/header'); -%>
 <h1>Home</h1>
 <p class="abcd"><%= FirstContent %></p>
- <!-- for(var i=0;i<posts.length;i++){
-  console.log(posts[i].title1);
- }  -->
- <% posts.forEach(function(post){ %>
-  <h1><%= post.title1 %></h1>
-  <p><%= post.content.substring(0,50) + " ..." %><a href="/posts/<%= post.title1 %>">Read more</a></p>
+ <% postss.forEach(function(post){ %>
+  <h1><%= post.title %></h1>
+  <p><%= post.content.substring(0,50) + " ..." %><a href="/posts/<%= post._id %>">Read more</a></p>
   <% })  %>
   <br>
   <br>
